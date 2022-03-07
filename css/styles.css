@@ -1,0 +1,348 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Tags
+/* 2. Body
+/* 3. Game
+/*   3.1 Pads
+/*   3.2 Center
+/*      3.2.1 GUI
+/* 4. Footer
+/**********************************/
+
+/**********************************/
+/* Color Guide:
+/* 
+/* #00A74A : normal-green
+/* #9F0F17 : normal-red
+/* #CCA707 : normal-yellow
+/* #094A8F : normal-blue
+/* #13ff7c : light-green
+/* #ff4c4c : light-red
+/* #fed93f : light-yellow
+/* #1c8cff : light-blue
+/* #333333 : gray
+/* #ECE7EE : center
+/* #32050C : counter-color
+/*
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+:root {
+	--clr-normal-green:   #00A74A;
+	--clr-normal-red:     #9F0F17;
+	--clr-normal-yellow:  #CCA707;
+	--clr-normal-blue:    #094A8F;
+	
+	--clr-light-green:    #13ff7c;
+	--clr-light-red:      #ff4c4c;
+	--clr-light-yellow:   #fed93f;
+	--clr-light-blue:     #1c8cff;
+	
+	--clr-border:		  #333333;
+	--clr-center:  		  #ECE7EE;
+
+	--clr-counter-bg:	  #32050C;
+	--clr-counter-off:	  #430710;
+	--clr-counter-on:	  #DC0D29;
+	
+	--clr-switch: 	      #3193DE;
+
+	--game-size: 48rem;
+	--game-border: 1.5rem solid var(--clr-border);
+}
+
+/**********************************/
+/* 1. Tags
+/**********************************/
+
+html {
+	font-size: 62.5%; /*equivale a 10px*/
+}
+
+body {
+	background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/wood_pattern.png');
+	font-family: "Bungee", verdana, sans-serif;
+}
+
+/**********************************/
+/* 2. Body
+/**********************************/
+
+.container{
+	width: 48rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4.5rem;
+}
+
+/**********************************/
+/* 3. Game
+/**********************************/
+
+.game{
+	width: 48rem;
+	height: 48rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.game_title{
+	font-size: 3rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	padding-left: 1.2rem;
+	padding-top: 3rem;
+}
+
+.reg{
+	font-family: Verdana,sans-serif;
+	font-size: 1.2rem;
+	margin-left: -0.5rem;
+	vertical-align: top;
+}
+
+/**********************************/
+/* 3.1 Pads
+/**********************************/
+
+.game_pad{
+	width: calc(48rem / 2);
+	height: calc(48rem / 2);
+	border: var(--game-border);
+	
+}
+
+.game_pad-tl{
+	background-color: var(--clr-normal-green);
+	border-top-left-radius: 100%;
+	
+}
+
+.game_pad-tr{
+	background-color: var(--clr-normal-red);
+	border-top-right-radius: 100%;
+	
+}
+
+.game_pad-bl{
+	background-color: var(--clr-normal-yellow);
+	border-bottom-left-radius: 100%;
+	
+}
+
+.game_pad-br{
+	background-color: var(--clr-normal-blue);
+	border-bottom-right-radius: 100%;
+	
+}
+
+.game_options{
+	position:absolute;
+	margin-top: calc(48rem / 4);
+	margin-left: calc(48rem /4);
+	border: var(--game-border);
+	border-radius: 100%;
+	background-color: var(--clr-center);
+	width: calc(48rem /2);
+	height: calc(48rem / 2);	
+}
+
+.game_pad-tl.game_pad-active{
+	background-color: var(--clr-light-green);
+}
+
+.game_pad-tr.game_pad-active{
+	background-color: var(--clr-light-red);
+}
+
+.game_pad-bl.game_pad-active{
+	background-color: var(--clr-light-yellow);
+}
+
+.game_pad-br.game_pad-active{
+	background-color: var(--clr-light-blue);
+}
+
+/**********************************/
+/* 3.2 Center
+/**********************************/
+
+/**********************************/
+/* 3.2.1 GUI
+/**********************************/
+.gui{
+	padding-left: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items:flex-end;
+}
+
+.group{
+	margin-right: 2.2rem;
+	
+}
+
+.group_large{
+	display: flex;
+	width: 10rem;
+	margin-left: 4.5rem;
+}
+
+.gui_label{
+	font-family: "Arima Madurai", cursive;
+	font-weight: bold;
+	font-size: 0.75rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.gui_label-start{
+margin-left: 4rem;
+}
+
+.gui_label-score{
+	margin-left: 1rem;
+}
+
+.gui_label-best-score{
+	margin-left: 3rem;
+}
+
+.gui_label-best-sequence{
+	margin-left: 1.5rem;
+}
+
+.gui_label-switch{
+	margin: 0;
+	
+	padding-top: 0.75rem;
+}
+
+.gui_btn{
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-left: .2rem;
+	border-radius: 5rem;
+	box-shadow: 0 .2rem .3rem #222;
+	border: .4rem solid #444;
+	cursor: pointer;
+	
+}
+
+.gui_btn:active {
+	transform: translate(0, .3rem);
+	box-shadow: none;
+}
+
+.gui_btn-start{
+	background-color: red;
+	margin-left: 4rem;
+}
+
+.gui_btn-best-sequence{
+	background-color: yellow;
+	margin-left: 3rem;
+}
+
+.gui_btn-switch{
+	background-color: #222;
+	margin-left: .9rem;
+	margin-right: .9rem;
+	width: 5rem;
+	height: 2.3rem;
+	border-radius: .3rem;
+	cursor: pointer;
+}
+
+.gui_btn-switch::before{
+	content: "";
+	background-color: var(--clr-switch);
+	display: block;
+	position: relative;
+	left: 2.5rem;
+	width: 2.2rem;
+	height: 1.9rem;
+	border-radius: .3rem;
+	border: .2rem solid #333;
+}
+
+.gui_btn-switch-on::before{
+	left: 0;
+}
+
+.gui_counter{
+	background-color: var(--clr-counter-bg);
+	color: var(--clr-counter-off);
+	font-family: "Iceland", cursive;
+	font-weight: bold;
+	font-size: 3rem;
+	text-align: right;
+	width: 5.5rem;
+	border: .3rem solid #000;
+	border-radius: 1rem;
+	padding-right: .2rem;
+	padding-left: .3rem;
+	margin-left: 1rem;
+}
+
+.gui_counter-on{
+	color: var(--clr-counter-on);
+}
+
+.gui_best-score{
+	background-color: var(--clr-counter-bg);
+	color: var(--clr-counter-off);
+	font-family: "Iceland", cursive;
+	font-weight: bold;
+	font-size: 3rem;
+	text-align: right;
+	width: 5.5rem;
+	border: .3rem solid #000;
+	border-radius: 1rem;
+	padding-right: .2rem;
+	padding-left: .3rem;
+	margin-left: 3rem;
+}
+
+.gui_best-score-on{
+	color: var(--clr-counter-on);
+}
+
+.gui_led {
+	background-color: #32050C;
+	margin-left: 1rem;
+	margin-bottom: .5rem;
+	width: .8rem;
+	height: .8rem;
+	border: .2rem solid #222;
+	border-radius: 2rem;
+}
+
+.gui_led-active{
+	background-color: red;
+}
+/**********************************/
+/* 4. Footer
+/**********************************/
+
+footer{
+	margin-top: 3rem;
+	text-align: center;
+	font-size: 1rem;
+}
+
+@media (max-width: 600px){
+	html{
+		font-size: 45%;
+	}
+}
