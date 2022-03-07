@@ -5,17 +5,6 @@
 }
 
 /**********************************/
-/* 0. Variáveis
-/* 1. Tags
-/* 2. Body
-/* 3. Game
-/*   3.1 Pads
-/*   3.2 Center
-/*      3.2.1 GUI
-/* 4. Footer
-/**********************************/
-
-/**********************************/
 /* Color Guide:
 /* 
 /* #00A74A : normal-green
@@ -118,32 +107,27 @@ body {
 .game_pad{
 	width: calc(48rem / 2);
 	height: calc(48rem / 2);
-	border: var(--game-border);
-	
+	border: var(--game-border);	
 }
 
 .game_pad-tl{
 	background-color: var(--clr-normal-green);
-	border-top-left-radius: 100%;
-	
+	border-top-left-radius: 100%;	
 }
 
 .game_pad-tr{
 	background-color: var(--clr-normal-red);
-	border-top-right-radius: 100%;
-	
+	border-top-right-radius: 100%;	
 }
 
 .game_pad-bl{
 	background-color: var(--clr-normal-yellow);
-	border-bottom-left-radius: 100%;
-	
+	border-bottom-left-radius: 100%;	
 }
 
 .game_pad-br{
 	background-color: var(--clr-normal-blue);
-	border-bottom-right-radius: 100%;
-	
+	border-bottom-right-radius: 100%;	
 }
 
 .game_options{
@@ -235,8 +219,7 @@ margin-left: 4rem;
 	border-radius: 5rem;
 	box-shadow: 0 .2rem .3rem #222;
 	border: .4rem solid #444;
-	cursor: pointer;
-	
+	cursor: pointer;	
 }
 
 .gui_btn:active {
