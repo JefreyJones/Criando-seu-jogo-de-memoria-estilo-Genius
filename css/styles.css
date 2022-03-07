@@ -58,7 +58,7 @@ html {
 }
 
 body {
-	background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/wood_pattern.png');
+	background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/wood_pattern.png);
 	font-family: "Bungee", verdana, sans-serif;
 }
 
